@@ -23,7 +23,7 @@ document.getElementById('submit').addEventListener('click',function (e) {
 
         if (this.readyState == 4){
             var date_rr = JSON.parse(xhr.responseText)
-           console.log(date_rr)
+           console.log(date_rr,'d')
 
            
             
