@@ -12,7 +12,7 @@ function reset_data() {
 
 document.getElementById('submit').addEventListener('click',function (e) {
     e.preventDefault();
-
+console.log(get_data())
     // var xhr = new XMLHttpRequest();
     // xhr.open('POST', 'back/hello', true);
     // xhr.setRequestHeader('Content-Type','application/json')
