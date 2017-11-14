@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var nodemailer = require('nodemailer'); 
 
-/* GET home page. */
 router.post('/mail', function(req, res, next) {
     var array = req.body
    
-    
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -27,7 +26,6 @@ router.post('/mail', function(req, res, next) {
         console.log(error);
       } else {
         console.log('Email sent: ' + info.response);
-        console.log('message set')
       }
     });
 
