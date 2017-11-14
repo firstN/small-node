@@ -29,6 +29,6 @@ document.getElementById('submit').addEventListener('click',function  like_name(e
             
         } else {}
     }  
-    
+    console.log('a')
     reset_data()
 })
