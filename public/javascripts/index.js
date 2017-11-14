@@ -10,7 +10,7 @@ function reset_data() {
     document.getElementById('password').value='';
 }
 
-document.getElementById('submit').addEventListener('click',function (e) {
+document.getElementById('submit').addEventListener('click',function  like_name(e) {
     e.preventDefault();
     var array = JSON.stringify(get_data());
    
