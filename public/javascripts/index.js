@@ -12,9 +12,22 @@ function reset_data() {
 
 document.getElementById('submit').addEventListener('click',function (e) {
     e.preventDefault();
-    console.log(get_data().name)
-    console.log(get_data().password)
-    console.log('get_data().password')
+
+    // var xhr = new XMLHttpRequest();
+    // xhr.open('POST', 'back/hello', true);
+    // xhr.setRequestHeader('Content-Type','application/json')
+    
+    // xhr.send(JSON.stringify(date))
+    // xhr.onreadystatechange = function(){
+
+    //     if (this.readyState == 4){
+    //         let date_rr = JSON.parse(xhr.responseText)
+    //        console.log(date_rr)
+
+           
+            
+    //     } else {}
+    // }  
     
     reset_data()
 })
