@@ -1,0 +1,33 @@
+doctype html
+-
+  var jsLibs= {
+  '$' : "https://code.jquery.com/jquery-2.1.1.min.js",
+  'materialize.min.js' : "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"
+  }
+  var cssLibs= {
+  normalize : 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css',
+  'Material+Icons' : "https://fonts.googleapis.com/icon?family=Material+Icons",
+  'materialize.min.css' : "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css",
+  "fonts-roboto" : "https://fonts.googleapis.com/css?family=Roboto",
+  'my':'./stylesheets/style.css'
+  }
+html
+  head
+    if( jsLibs )
+      each lib,libName in jsLibs
+        script(src=lib)
+        //.
+          #{libName}
+    if( cssLibs )
+      each lib,libName in cssLibs
+        link(rel='stylesheet', href=lib)
+        //.
+          #{libName}
+    title= title
+  body
+    input(type="text" )#name
+    input(type="text" )#password
+    input(type="submit" )#submit.btn
+    block content
+    script(src="javascripts/index.js")
+     
