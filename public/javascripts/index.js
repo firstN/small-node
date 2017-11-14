@@ -13,5 +13,7 @@ function reset_data() {
 document.getElementById('submit').addEventListener('click',function (e) {
     e.preventDefault();
     console.log(get_data().name)
+    console.log(get_data().password)
+    
     reset_data()
 })
