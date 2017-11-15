@@ -14,9 +14,10 @@ function get_data(name,password) {
  
  
  
- function send_form(e,name,password,path_post) {
-     e.preventDefault();
+ function send_form(name,password,path_post) {
+   
      var array = JSON.stringify(get_data.call(null,name,password));
+
     console.log(array)
      var xhr = new XMLHttpRequest();
      xhr.open('POST', path_post, true);
@@ -36,12 +37,17 @@ function get_data(name,password) {
      
      reset_data.call(null,name,password)
  }
+ if(document.getElementById('submit')){
 document.getElementById('submit').addEventListener('click', function(e){
-    send_form.call(null,e,'name','password','gmail/mail')
+    e.preventDefault();
+    send_form.call(null,'name','password','gmail/mail')
 }) 
+ }
   
 if(document.getElementById('submit_db')){
+    
     document.getElementById('submit_db').addEventListener('click', function(e){
-        send_form.call(null,e,'name_db','password_db','login:in/user')
+        e.preventDefault();
+        send_form.call(null,'name_db','password_db','login:in/user')
     } )
 }

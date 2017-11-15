@@ -5,7 +5,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 router.post('/mail', function(req, res, next) {
     var array = req.body
-   
+   console.log('you there')
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
