@@ -27,7 +27,7 @@ function get_data(name,password) {
  
          if (this.readyState == 4){
              var date_rr = JSON.parse(xhr.responseText)
-            console.log(date_rr,'d')
+            console.log(date_rr,'darck')
  
             
              
