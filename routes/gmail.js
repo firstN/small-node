@@ -16,7 +16,7 @@ router.post('/mail', function(req, res, next) {
     
     var mailOptions = {
       from: 'nykolaychmut@gmail.com',
-      to: 'annachmut@ukr.net',
+      to: 'chmutkola@gmail.com',
       subject: 'Sending Email using Node.js',
       html: '<p>'+array.name+ '<br>'+array.password+'</p> '
      
