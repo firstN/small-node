@@ -11,7 +11,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/users', users);
 app.use('/gmail', gmail);
-app.use('/login:in', login_in);
+app.use('/loginin', login_in);
 
 
 app.use('*',error);

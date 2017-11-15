@@ -20,7 +20,7 @@ router.post('/user', function(req, res, next) {
 //        })
 //     })
 //    console.log(req.body)
-   res.send(user)
+   res.send(req.body)
 });
 
 module.exports = router;

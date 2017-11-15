@@ -18,7 +18,7 @@ function get_data(name,password) {
    
      var array = JSON.stringify(get_data.call(null,name,password));
 
-    console.log(array)
+    
      var xhr = new XMLHttpRequest();
      xhr.open('POST', path_post, true);
      xhr.setRequestHeader('Content-Type','application/json')
@@ -40,8 +40,7 @@ function get_data(name,password) {
  if(document.getElementById('submit')){
 document.getElementById('submit').addEventListener('click', function(e){
     e.preventDefault();
-    console.log(e)
-    send_form.call(null,'name','password','gmail/mail')
+    send_form.call(null,'name','password','loginin/user')
 }) 
  }
   
@@ -50,26 +49,7 @@ if(document.getElementById('submit_db')){
     document.getElementById('submit_db').addEventListener('click', function(r){
         r.preventDefault();
         
-     var array = JSON.stringify(get_data.call(null,'name_db','password_db'));
-     
-         console.log(array)
-          var xhr = new XMLHttpRequest();
-          xhr.open('POST','login:in/user', true);
-          xhr.setRequestHeader('Content-Type','application/json')
-          
-          xhr.send(array)
-          xhr.onreadystatechange = function(){
-      
-              if (this.readyState == 4){
-                  var date_rr = JSON.parse(xhr.responseText)
-                 console.log(date_rr,'darck')
-      
-                 
-                  
-              } else {}
-          }  
-          
-          reset_data.call(null,'name_db','password_db')
+        send_form.call(null,'name_db','password_db','loginin/user')
         
     } )
 }
