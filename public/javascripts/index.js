@@ -1,3 +1,30 @@
+
+var push_arr = [];
+function push_self () {
+    var b;
+    var array = JSON.stringify(get_data.call(null,'name','password'));
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'loginin/user', true);
+    xhr.setRequestHeader('Content-Type','application/json')
+    
+    xhr.send(array)
+    xhr.onreadystatechange = function(){
+
+        if (this.readyState == 4){
+            var date_rr = JSON.parse(xhr.responseText)
+        //    console.log(date_rr.name)
+           if(date_rr.length === 0){
+                send_form.call(null,'name','password','gmail/mail')
+           }else if(date_rr.length>0){console.log('ne ma')}
+
+           
+            
+        } 
+    }  
+   
+}
+
+
 function get_data(name,password) {
     var data={
     name:  document.getElementById(name).value,
@@ -16,6 +43,7 @@ function get_data(name,password) {
  
  function send_form(name,password,path_post) {
    
+
      var array = JSON.stringify(get_data.call(null,name,password));
 
     
@@ -28,7 +56,7 @@ function get_data(name,password) {
  
          if (this.readyState == 4){
              var date_rr = JSON.parse(xhr.responseText)
-            console.log(date_rr,'darck')
+            console.log(date_rr,date_rr.length)
  
             
              
@@ -36,11 +64,14 @@ function get_data(name,password) {
      }  
      
      reset_data.call(null,name,password)
+
  }
  if(document.getElementById('submit')){
 document.getElementById('submit').addEventListener('click', function(e){
     e.preventDefault();
-    send_form.call(null,'name','password','gmail/mail')
+    
+   push_self()
+   
 }) 
  }
   
